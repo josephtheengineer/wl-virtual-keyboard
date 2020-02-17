@@ -119,7 +119,13 @@ int help()
 	return 0;
 }
 
-int main(void)
+int list_key_codes()
+{
+	printf("This feature is not implemented yet!");
+	return 0;
+}
+
+int test()
 {
 	printf("Creating virtual keyboard...\n");
 	int fd;
@@ -163,8 +169,8 @@ int main(int argc, char** argv)
 	const int PRESS = 0;
 	const int RELEASE = 1;
 	int mode = PRESS;
-	char code;
-	char release;
+	char *code;
+	char *release;
 	int c;
 
 	opterr = 0;
@@ -179,7 +185,7 @@ int main(int argc, char** argv)
 	}
 	else if (strcmp(argv[1], "list-key-codes") == 0)
 	{
-		list-key-codes();
+		list_key_codes();
 		return 0;
 	}
 	else if (strcmp(argv[1], "version") == 0)
